@@ -1,0 +1,35 @@
+.first-rectangle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #fab187;
+    border-radius: 30px;
+    border: 5px double;
+    opacity: 80%;
+}
+.second-rectangle-pos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #c78b8b;
+    border-radius: 30px;
+    border: 5px double;
+    opacity: 80%;
+    
+}
+.second-rectangle-trans {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #c78b8b;
+    border-radius: 30px;
+    border: 5px double;
+    opacity: 80%;
+    transform: translate(+50%, +50%);
+}
+.container {
+    display: flex;
+    gap: 150px;
+}
