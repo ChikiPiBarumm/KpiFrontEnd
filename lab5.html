@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Черненко М.С. ІК-24</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Черненко, МС, ІК-24, Лаб1, Основи Front-end технологій">
+        <meta name="description" content="Ця сторінка створена тільки для академічних цілей">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+        <style>
+            table {
+                width: 50%;
+                margin: 20px 0;
+                border-collapse: collapse;
+            }
+            td {
+                border: 1px solid black;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu-container">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Лаба 1</a></li>
+                    <li><a href="lab2.html">Лаба 2</a></li>
+                    <li><a href="lab3.html">Лаба 3</a></li>
+                    <li><a href="lab4.html">Лаба 4</a></li>
+                    <li><a href="lab5.html">Лаба 5</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <h2 style="text-align: center;">Завдання 1 (Варіант 13)</h2>
+        <form id="infoForm">
+            <label for="fullName">ПІБ:</label><br>
+            <input type="text" id="fullName" name="fullName" placeholder="Іванов І.І."><br><br>
+
+            <label for="group">Група:</label><br>
+            <input type="text" id="group" name="group" placeholder="AA-12"><br><br>
+
+            <label for="phone">Телефон:</label><br>
+            <input type="text" id="phone" name="phone" placeholder="(123)-456-78-90"><br><br>
+
+            <label for="faculty">Факультет (4-10 букв):</label><br>
+            <input type="text" id="faculty" name="faculty" placeholder="ФІОТ"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" placeholder="example@domain.com"><br><br>
+
+            <button type="button" onclick="validateForm()">Підтвердити</button>
+        </form>
+
+        <h2 style="text-align: center;">Завдання 2 (Варіант 8)</h2>
+        <script>createTable()</script>
+        
+    </body>
+</html>

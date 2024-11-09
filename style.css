@@ -148,3 +148,8 @@ body {
     width: 300px;
     transition: width 0.3s;
 }
+
+/*Lab5*/
+.error {
+    border: 2px solid red;
+}
