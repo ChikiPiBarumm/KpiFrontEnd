@@ -142,3 +142,9 @@ body {
 body {
     margin-top: 60px;
 }
+
+/*Lab4*/
+#main-image {
+    width: 300px;
+    transition: width 0.3s;
+}
