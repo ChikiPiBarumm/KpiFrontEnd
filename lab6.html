@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Черненко М.С. ІК-24</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Черненко, МС, ІК-24, Лаб1, Основи Front-end технологій">
+        <meta name="description" content="Ця сторінка створена тільки для академічних цілей">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            body {
+                background-color: #f0f4f8;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                background-color: #007bff;
+                color: white;
+                cursor: pointer;
+                margin-bottom: 20px;
+                transition: background-color 0.3s;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu-container">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Лаба 1</a></li>
+                    <li><a href="lab2.html">Лаба 2</a></li>
+                    <li><a href="lab3.html">Лаба 3</a></li>
+                    <li><a href="lab4.html">Лаба 4</a></li>
+                    <li><a href="lab5.html">Лаба 5</a></li>
+                    <li><a href="lab6.html">Лаба 6</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <button id="fetchUser">Get Random User</button>
+        <div id="usersContainer" class="user-container"></div>
+        <script>
+            document.getElementById('fetchUser').addEventListener('click', () => {
+            fetch('https://randomuser.me/api/?results=5')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const users = data.results;
+                    const usersContainer = document.getElementById('usersContainer');
+                    usersContainer.innerHTML = '';
+
+                    users.forEach(user => {
+                        const userDiv = document.createElement('div');
+                        userDiv.classList.add('user-info');
+                        userDiv.innerHTML = `
+                            <div><img src="${user.picture.large}" alt="User Picture"></div>
+                            <div><strong>Country:</strong> ${user.location.country}</div>
+                            <div><strong>Postcode:</strong> ${user.location.postcode}</div>
+                            <div><strong>Phone:</strong> ${user.phone}</div>
+                            <div><strong>Name:</strong> ${user.name.first} ${user.name.last}</div>
+                        `;
+                        usersContainer.appendChild(userDiv);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('usersContainer').textContent = 'Error fetching data. Please try again.';
+                });
+        });
+        </script>
+
+    </body>
+</html>

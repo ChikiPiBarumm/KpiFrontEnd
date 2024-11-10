@@ -133,11 +133,12 @@ body {
 }
 .menu li a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.3s ease, color 0.3s;
 }
 .menu li a:hover {
     color: #4682B4;
-    text-decoration: underline;
+    text-decoration-color: #4682B4;
 }
 body {
     margin-top: 60px;
@@ -152,4 +153,29 @@ body {
 /*Lab5*/
 .error {
     border: 2px solid red;
+}
+
+/*Lab6*/
+.user-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.user-info {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+}
+.user-info img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.user-info div {
+    font-size: 16px;
+    margin: 5px 0;
 }
