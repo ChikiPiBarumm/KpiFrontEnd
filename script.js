@@ -1,6 +1,6 @@
 // Lab4.Завдання 1
 let clickCount = 0;
-const targetIndex = (58 % 10) + 1;
+const targetIndex = 11;
 
 document.querySelectorAll('li, p, h2, ol li').forEach((element, index) => {
     element.addEventListener('click', (event) => {
@@ -94,7 +94,7 @@ function validateForm() {
 }
 
 
-// Lab 5.Завдання 1
+// Lab 5.Завдання 2
 function createTable() {
     const table = document.createElement('table');
     table.style.borderCollapse = 'collapse';

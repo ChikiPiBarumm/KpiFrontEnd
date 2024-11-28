@@ -1,0 +1,182 @@
+/*Lab2*/
+.first-rectangle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #fab187;
+    border-radius: 30px;
+    border: 5px double;
+    opacity: 80%;
+}
+.second-rectangle-pos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #c78b8b;
+    border-radius: 30px;
+    border: 5px double;
+    opacity: 80%;
+}
+.second-rectangle-trans {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #c78b8b;
+    border-radius: 30px;
+    border: 5px double;
+    opacity: 80%;
+    transform: translate(+50%, +50%);
+}
+.shape-container {
+    display: flex;
+    gap: 150px;
+}
+
+/*Lab3.1*/
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.header-text, .footer-text {
+    width: 100%;
+    text-align: center;
+    background-color: #00BFFF;
+    padding: 20px 0;
+    margin-bottom: 0px;
+}
+.footer-text {
+    background-color: #FFD700;
+}
+.content {
+    overflow: hidden; /*очищення флоат*/
+    margin-bottom: 0px;
+}
+.img, .text {
+    float: left;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+}
+.img:nth-child(1) {
+    width: 25%;
+    background-color: #90EE90;
+    margin-right: 0px;
+}
+.img:nth-child(2) {
+    width: 50%;
+    background-color: #FFFF99;
+    margin-right: 0px;
+}
+.text {
+    width: 25%;
+    background-color: #DDA0DD;
+}
+.footer-text {
+    padding: 20px 0;
+}
+
+/*Lab3.2*/
+#content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+#img-left, #img-center, #text {
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+}
+#img-left {
+    flex: 1 1 25%;
+    background-color: #90EE90;
+}
+#img-center {
+    flex: 1 1 50%;
+    background-color: #FFFF99;
+}
+#text {
+    flex: 1 1 25%;
+    background-color: #DDA0DD;
+}
+.footer-text {
+    padding: 20px 0;
+}
+
+/*Menu*/
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.menu li {
+    display: inline;
+    margin-right: 15px;
+}
+.menu li a {
+    color: #fff;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.3s ease, color 0.3s;
+}
+.menu li a:hover {
+    color: #4682B4;
+    text-decoration-color: #4682B4;
+}
+body {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/*Lab4*/
+#main-image {
+    width: 300px;
+    transition: width 0.3s;
+}
+
+/*Lab5*/
+.error {
+    border: 2px solid red;
+}
+
+/*Lab6*/
+.user-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.user-info {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+}
+.user-info img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.user-info div {
+    font-size: 16px;
+    margin: 5px 0;
+}
